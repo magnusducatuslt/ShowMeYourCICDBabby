@@ -21,6 +21,7 @@ jobs:
               sudo yarn
               sudo yarn build
               cd ..
+              pwd
               pm2 stop pokerhouse
               pm2 start pokerhouse
             
