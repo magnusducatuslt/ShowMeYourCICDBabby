@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: Show creds
-          run: echo "${{ secrets.IP }} $First_Name. Today is $DAY_OF_WEEK!"
+          run: echo "${{ secrets.IP }} ${{ secrets }}. Today is $DAY_OF_WEEK!"
         - name: Deploy to Staging server
           uses: appleboy/ssh-action@master
           with: 
