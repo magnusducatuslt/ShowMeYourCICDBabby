@@ -18,8 +18,8 @@ jobs:
               cd /srv/poker_playhouse
               git pull origin master
               cd client/
-              yarn
-              yarn build
+              sudo yarn
+              sudo yarn build
               cd ..
               pm2 stop pokerhouse
               pm2 start pokerhouse
