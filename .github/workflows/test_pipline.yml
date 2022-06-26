@@ -9,8 +9,8 @@ jobs:
         - name: Deploy to Staging server
           uses: appleboy/ssh-action@master
           with: 
-            host: ${{ secrets.IP }}
-            username: ${{ secrets.USER }}
-            key: ${{ secrets.PRIVATE_KEY }}
+            host: ${{ secrets.TEST_SECRET_REPOSITORY.IP }}
+            username: ${{ secrets.TEST_SECRET_REPOSITORY.USER }}
+            key: ${{ secrets.TEST_SECRET_REPOSITORY.PRIVATE_KEY }}
             script: whoami
     
