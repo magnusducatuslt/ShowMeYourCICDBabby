@@ -16,7 +16,7 @@ jobs:
             script: |
               sudo su
               cd /srv/poker_playhouse
-              git pull origin master
+              sudo git pull origin master
               cd client/
               sudo yarn
               sudo yarn build
