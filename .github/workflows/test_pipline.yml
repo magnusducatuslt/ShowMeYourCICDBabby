@@ -12,5 +12,6 @@ jobs:
             host: ${{ secrets.IP }}
             username: ${{ secrets.USERNAME }}
             key: ${{ secrets.TEST_SECRET_REPOSITORY.PRIVATE_KEY }}
+            password: "",
             script: whoami
     
