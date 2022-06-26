@@ -5,13 +5,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: Show creds
-          run: echo "${{ secrets.IP }} ${{ secrets }}. Today is $DAY_OF_WEEK!"
+          run: echo "${{ secrets.IP }} ${{ secrets.USERNAME}} ${{secrets.PRIVATE_KEY}} . Today is $DAY_OF_WEEK!"
         - name: Deploy to Staging server
           uses: appleboy/ssh-action@master
           with: 
             host: ${{ secrets.IP }}
             username: ${{ secrets.USERNAME }}
-            key: ${{ secrets.TEST_SECRET_REPOSITORY.PRIVATE_KEY }}
+            key: ${{ secrets.PRIVATE_KEY }}
             password: ""
             script: whoami
     
