@@ -22,7 +22,7 @@ jobs:
               sudo yarn build
               cd ..
               pwd
-              pm2 stop pokerhouse
+              pm2 restart ecosystem.config.js
               pm2 start pokerhouse
             
     
